@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 type Application = { id: number, title: string, status: string };
 
@@ -12,6 +13,11 @@ function HomePage() {
     return (
         <div className="m-15 border border-b p-15 bg-orange-50">
             <h1>This is myown project</h1>
+            <p>
+                <Link className="text-blue-600 underline block mb-5" href="/about">
+                    Страница о нас
+                </Link>
+            </p>
             <ul>
                 {fakeApplications.map((app) => (
                     <li key={app.id}>
