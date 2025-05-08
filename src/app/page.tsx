@@ -10,13 +10,16 @@ const fakeApplications: Application[] = [
 
 function HomePage() {
     return (
-        <ul className="m-15 border border-b p-15 bg-orange-50">
-            {fakeApplications.map((app) => (
-                <li key={app.id}>
-                    <strong>{app.title}</strong> — {app.status}
-                </li>
-            ))}
-        </ul>
+        <div className="m-15 border border-b p-15 bg-orange-50">
+            <h1>This is myown project</h1>
+            <ul>
+                {fakeApplications.map((app) => (
+                    <li key={app.id}>
+                        <strong>{app.title}</strong> — {app.status}
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 }
 
